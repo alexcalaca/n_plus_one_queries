@@ -1,4 +1,4 @@
-<% @posts.each do |post| %>
+<% @posts.includes(:comments).each do |post| %>
   <h2><%= post.title %></h2>
   <ul>
     <% post.comments.each do |comment| %>
